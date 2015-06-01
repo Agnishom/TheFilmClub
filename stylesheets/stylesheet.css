@@ -1,0 +1,1825 @@
+body 
+{
+background-color:#111133;
+background-image: url('../images/background.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+color: #ffffff;
+
+}
+
+.welcome{
+    text-align: center;
+    background-color: #990099;
+    border-radius: 10px;
+    font-family: cursive;
+    color: #FFFFFF;
+}
+
+.heading{
+    text-align: center;
+    font-family: fantasy;
+    color: #ffffff;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Effect 1: Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.cl-effect-2 a {
+	line-height: 44px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.cl-effect-2 a span {
+	position: relative;
+	display: inline-block;
+	padding: 0 14px;
+	background: #2195de;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.csstransforms3d .cl-effect-2 a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0965a0;
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .cl-effect-2 a:hover span::before,
+.csstransforms3d .cl-effect-2 a:focus span::before {
+	background: #28a2ee;	
+}
+
+/* Effect 3: bottom line slides/fades in */
+.cl-effect-3 a {
+	padding: 8px 0;
+}
+
+.cl-effect-3 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: rgba(0,0,0,0.1);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-3 a:hover::after,
+.cl-effect-3 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+/* Effect 4: bottom border enlarge */
+.cl-effect-4 a {
+	padding: 0 0 10px;
+}
+
+.cl-effect-4 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after {
+	height: 5px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+/* Effect 5: same word slide in */
+.cl-effect-5 a {
+	overflow: hidden;
+	padding: 0 4px;
+	height: 1em;
+}
+
+.cl-effect-5 a span {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-5 a span::before {
+	position: absolute;
+	top: 100%;
+	content: attr(data-hover);
+	font-weight: 700;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.cl-effect-5 a:hover span,
+.cl-effect-5 a:focus span {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+/* Effect 5: same word slide in and border bottom */
+.cl-effect-6 a {
+	margin: 0 10px;
+	padding: 10px 20px;
+}
+
+.cl-effect-6 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	-webkit-transition: top 0.3s;
+	-moz-transition: top 0.3s;
+	transition: top 0.3s;
+}
+
+.cl-effect-6 a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+.cl-effect-6 a:hover::before {
+	top: 100%;
+	opacity: 1;
+}
+
+.cl-effect-6 a:hover::after {
+	height: 100%;
+} 
+
+/* Effect 7: second border slides up */
+.cl-effect-7 a {
+	padding: 12px 10px 10px;
+	color: #566473;
+	text-shadow: none;
+	font-weight: 700;
+}
+
+.cl-effect-7 a::before,
+.cl-effect-7 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #566473;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	transform: scale(0.85);
+}
+
+.cl-effect-7 a::after {
+	opacity: 0;
+	-webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: top 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.cl-effect-7 a:hover::before,
+.cl-effect-7 a:hover::after,
+.cl-effect-7 a:focus::before,
+.cl-effect-7 a:focus::after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+}
+
+.cl-effect-7 a:hover::after,
+.cl-effect-7 a:focus::after {
+	top: 0%;
+	opacity: 1;
+}
+
+/* Effect 8: border slight translate */
+.cl-effect-8 a {
+	padding: 10px 20px;
+}
+
+.cl-effect-8 a::before,
+.cl-effect-8 a::after  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #354856;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.cl-effect-8 a::after  {
+	border-color: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(-7px) translateX(6px);
+	-moz-transform: translateY(-7px) translateX(6px);
+	transform: translateY(-7px) translateX(6px);
+}
+
+.cl-effect-8 a:hover::before,
+.cl-effect-8 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(5px) translateX(-5px);
+	-moz-transform: translateY(5px) translateX(-5px);
+	transform: translateY(5px) translateX(-5px);
+}
+
+.cl-effect-8 a:hover::after,
+.cl-effect-8 a:focus::after  {
+	opacity: 1;
+	-webkit-transform: translateY(0px) translateX(0px);
+	-moz-transform: translateY(0px) translateX(0px);
+	transform: translateY(0px) translateX(0px);
+}
+
+/* Effect 9: second text and borders */
+.cl-effect-9 a {
+	margin: 0 20px;
+	padding: 18px 20px;
+}
+
+.cl-effect-9 a::before,
+.cl-effect-9 a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+.cl-effect-9 a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-9 a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.cl-effect-9 a span:last-child {
+	z-index: 1;
+	display: block;
+	padding: 8px 0 0 0;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: 0.75em;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:focus::before {
+	height: 6px;
+}
+
+.cl-effect-9 a:hover::before,
+.cl-effect-9 a:hover::after,
+.cl-effect-9 a:focus::before,
+.cl-effect-9 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cl-effect-9 a:hover span:last-child,
+.cl-effect-9 a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+/* Effect 10: reveal, push out */
+.cl-effect-10  {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-10 a {
+	overflow: hidden;
+	margin: 0 15px;
+}
+
+.cl-effect-10 a span {
+	display: block;
+	padding: 10px 20px;
+	background: #0f7c67;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-10 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 10px 20px;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	color: #0f7c67;
+	content: attr(data-hover);
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(-25%);
+}
+
+.cl-effect-10 a:hover span,
+.cl-effect-10 a:focus span {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.cl-effect-10 a:hover::before,
+.cl-effect-10 a:focus::before {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.cl-effect-11 a {
+	padding: 10px 0;
+	border-top: 2px solid #0972b4;
+	color: #0972b4;
+	text-shadow: none;
+} 
+
+.cl-effect-11 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+
+.cl-effect-11 a:hover::before,
+.cl-effect-11 a:focus::before {
+	max-width: 100%;
+}
+
+/* Effect 12: circle */
+.cl-effect-12 a::before,
+.cl-effect-12 a::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.cl-effect-12 a::after {
+	width: 90px;
+	height: 90px;
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.cl-effect-12 a:hover::before,
+.cl-effect-12 a:hover::after,
+.cl-effect-12 a:focus::before,
+.cl-effect-12 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+/* Effect 13: three circles */
+.cl-effect-13 a {
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.2em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus {
+	color: #ba7700;
+}
+
+/* Effect 14: border switch */
+.cl-effect-14 a {
+	padding: 0 20px;
+	height: 45px;
+	line-height: 45px;
+}
+
+.cl-effect-14 a::before,
+.cl-effect-14 a::after {
+	position: absolute;
+	width: 45px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-14 a::before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.cl-effect-14 a::after {
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+.cl-effect-14 a:hover::before,
+.cl-effect-14 a:hover::after,
+.cl-effect-14 a:focus::before,
+.cl-effect-14 a:focus::after {
+	opacity: 1;
+}
+
+.cl-effect-14 a:hover::before,
+.cl-effect-14 a:focus::before {
+	left: 50%;
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	-moz-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+}
+
+.cl-effect-14 a:hover::after,
+.cl-effect-14 a:focus::after {
+	right: 50%;
+	-webkit-transform: rotate(0deg) translateX(50%);
+	-moz-transform: rotate(0deg) translateX(50%);
+	transform: rotate(0deg) translateX(50%);
+}
+
+/* Effect 15: scale down, reveal */
+.cl-effect-15 a {
+	color: rgba(0,0,0,0.2);
+	font-weight: 700;
+	text-shadow: none;
+}
+
+.cl-effect-15 a::before {
+	color: #fff;
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.cl-effect-15 a:hover::before,
+.cl-effect-15 a:focus::before {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+	opacity: 0;
+}
+
+/* Effect 16: fall down */
+.cl-effect-16 a {
+	color: #6f8686;
+	text-shadow: 0 0 1px rgba(111,134,134,0.3);
+}
+
+.cl-effect-16 a::before {
+	color: #fff;
+	content: attr(data-hover);
+	position: absolute;
+	opacity: 0;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	-webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	-moz-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-16 a:hover::before,
+.cl-effect-16 a:focus::before {
+	-webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	-moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+	opacity: 1;
+}
+
+/* Effect 17: move up fade out, push border */
+.cl-effect-17 a {
+	color: #10649b;
+	text-shadow: none;
+	padding: 10px 0;
+}
+
+.cl-effect-17 a::before {
+	color: #fff;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a:hover::before,
+.cl-effect-17 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.cl-effect-17 a:hover::after,
+.cl-effect-17 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+/* Effect 18: cross */
+.cl-effect-18 {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-18 a {
+	padding: 0 5px;
+	color: #b4770d;
+	font-weight: 700;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-18 a::before,
+.cl-effect-18 a::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	height: 2px;
+	margin-top: -1px;
+	background: #b4770d;
+	content: '';
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-18 a::before {
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+
+.cl-effect-18 a::after {
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.cl-effect-18 a:hover,
+.cl-effect-18 a:focus {
+	color: #fff;
+}
+
+.cl-effect-18 a:hover::before,
+.cl-effect-18 a:hover::after,
+.cl-effect-18 a:focus::before,
+.cl-effect-18 a:focus::after {
+	opacity: 0.7;
+}
+
+.cl-effect-18 a:hover::before,
+.cl-effect-18 a:focus::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.cl-effect-18 a:hover::after,
+.cl-effect-18 a:focus::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* Effect 19: 3D side */
+.cl-effect-19 a {
+	line-height: 2em;
+	margin: 15px;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+	width: 200px;
+}
+
+.cl-effect-19 a span {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding: 0 14px;
+	background: #e35041;
+	-webkit-transition: -webkit-transform 0.4s, background 0.4s;
+	-moz-transition: -moz-transform 0.4s, background 0.4s;
+	transition: transform 0.4s, background 0.4s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 50% 50% -100px;
+	-moz-transform-origin: 50% 50% -100px;
+	transform-origin: 50% 50% -100px;
+}
+
+.csstransforms3d .cl-effect-19 a span::before {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background: #b53a2d;
+	content: attr(data-hover);
+	-webkit-transition: background 0.4s;
+	-moz-transition: background 0.4s;
+	transition: background 0.4s;
+	-webkit-transform: rotateY(90deg);
+	-moz-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	pointer-events: none;
+}
+
+.cl-effect-19 a:hover span,
+.cl-effect-19 a:focus span {
+	background: #b53a2d;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+}
+
+.csstransforms3d .cl-effect-19 a:hover span::before,
+.csstransforms3d .cl-effect-19 a:focus span::before {
+	background: #ef5e50;	
+}
+
+/* Effect 20: 3D side */
+.cl-effect-20 a {
+	line-height: 2em;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+}
+
+.cl-effect-20 a span {
+	position: relative;
+	display: inline-block;
+	padding: 3px 15px 0;
+	background: #587285;
+	box-shadow: inset 0 3px #2f4351;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+	transition: background 0.6s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+
+.cl-effect-20 a span::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	color: #2f4351;
+	content: attr(data-hover);
+	-webkit-transform: rotateX(270deg);
+	-moz-transform: rotateX(270deg);
+	transform: rotateX(270deg);
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+
+.cl-effect-20 a:hover span,
+.cl-effect-20 a:focus span {
+	background: #2f4351;
+}
+
+.cl-effect-20 a:hover span::before,
+.cl-effect-20 a:focus span::before {
+	-webkit-transform: rotateX(10deg);	
+	-moz-transform: rotateX(10deg);
+	transform: rotateX(10deg);
+}
+
+/* Effect 21: borders slight translate */
+.cl-effect-21 a {
+	padding: 10px;
+	color: #237546;
+	font-weight: 700;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+	color: #fff;
+}
+
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.content {
+    background-color: rgba(54, 25, 25, .3);;
+}
+
+/*** Calendar **********************/
+div.calendar { position: relative; }
+
+.calendar table {
+cursor:pointer;
+border:1px solid #ccc;
+font-size: 11px;
+color: #000;
+background: #fff;
+font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+.calendar .button { 
+text-align: center;    
+padding: 2px;          
+}
+
+.calendar .nav {
+background:#f5f5f5;
+}
+
+.calendar thead .title { 
+font-weight: bold;      
+text-align: center;
+background: #dedede;
+color: #000;
+padding: 2px 0 3px 0;
+}
+
+.calendar thead .headrow { 
+background: #f5f5f5;
+color: #444;
+font-weight:bold;
+}
+
+.calendar thead .daynames { 
+background: #fff;
+color:#333;
+font-weight:bold;
+}
+
+.calendar thead .name { 
+border-bottom: 1px dotted #ccc;
+padding: 2px;
+text-align: center;
+color: #000;
+}
+
+.calendar thead .weekend { 
+color: #666;
+}
+
+.calendar thead .hilite { 
+background-color: #444;
+color: #fff;
+padding: 1px;
+}
+
+.calendar thead .active { 
+background-color: #d12f19;
+color:#fff;
+padding: 2px 0px 0px 2px;
+}
+
+
+.calendar tbody .day { 
+width:1.8em;
+color: #222;
+text-align: right;
+padding: 2px 2px 2px 2px;
+}
+.calendar tbody .day.othermonth {
+font-size: 80%;
+color: #bbb;
+}
+.calendar tbody .day.othermonth.oweekend {
+color: #fbb;
+}
+
+.calendar table .wn {
+padding: 2px 2px 2px 2px;
+border-right: 1px solid #000;
+background: #666;
+}
+
+.calendar tbody .rowhilite td {
+background: #FFF1AF;
+}
+
+.calendar tbody .rowhilite td.wn {
+background: #FFF1AF;
+}
+
+.calendar tbody td.hilite { 
+padding: 1px 1px 1px 1px;
+background:#444 !important;
+color:#fff !important;
+}
+
+.calendar tbody td.active { 
+color:#fff;
+background: #529214 !important;
+padding: 2px 2px 0px 2px;
+}
+
+.calendar tbody td.selected { 
+font-weight: bold;
+border: 1px solid #888;
+padding: 1px 1px 1px 1px;
+background: #f5f5f5 !important;
+color: #222 !important;
+}
+
+.calendar tbody td.weekend { 
+color: #666;
+}
+
+.calendar tbody td.today { 
+font-weight: bold;
+color: #529214;
+background:#D9EFC2;
+}
+
+.calendar tbody .disabled { color: #999; }
+
+.calendar tbody .emptycell { 
+visibility: hidden;
+}
+
+.calendar tbody .emptyrow { 
+display: none;
+}
+
+.calendar tfoot .footrow { 
+text-align: center;
+background: #556;
+color: #fff;
+}
+
+.calendar tfoot .ttip { 
+background: #222;
+color: #fff;
+font-size:10px;
+border-top: 1px solid #dedede;
+padding: 3px;
+}
+
+.calendar tfoot .hilite { 
+background: #aaf;
+border: 1px solid #04f;
+color: #000;
+padding: 1px;
+}
+
+.calendar tfoot .active { 
+background: #77c;
+padding: 2px 0px 0px 2px;
+}
+
+.calendar .combo {
+position: absolute;
+display: none;
+top: 0px;
+left: 0px;
+width: 4em;
+border: 1px solid #ccc;
+background: #f5f5f5;
+color: #222;
+font-size: 90%;
+z-index: 100;
+}
+
+.calendar .combo .label,
+.calendar .combo .label-IEfix {
+text-align: center;
+padding: 1px;
+}
+
+.calendar .combo .label-IEfix {
+width: 4em;
+}
+
+.calendar .combo .hilite {
+background: #444;
+color:#fff;
+}
+
+.calendar .combo .active {
+border-top: 1px solid #999;
+border-bottom: 1px solid #999;
+background: #dedede;
+font-weight: bold;
+}
+/** Embedded Form **/
+
+.embed #form_container{
+	border: none;
+}
+
+.embed #top, .embed #bottom, .embed h1{
+	display: none;
+}
+
+.embed #form_container{
+	width: 100%;
+}
+
+.embed #footer{
+	text-align: left;
+	padding-left: 10px;
+	width: 99%;
+}
+
+.embed #footer.success{
+	text-align: center;
+}
+
+.embed form.appnitro
+{
+	margin:0px 0px 0;
+	
+}
+/**** Form Section ****/
+.appnitro
+{
+	font-family:Lucida Grande, Tahoma, Arial, Verdana, sans-serif;
+	font-size:small;
+}
+
+.appnitro li
+{
+	width:61%;
+}
+
+form ul
+{
+	font-size:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+form li
+{
+	display:block;
+	margin:0;
+	padding:4px 5px 2px 9px;
+	position:relative;
+}
+
+form li:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.buttons
+{
+	clear:both;
+	display:block;
+	margin-top:10px;
+}
+
+* html form li
+{
+	height:1%;
+}
+
+* html .buttons
+{
+	height:1%;
+}
+
+* html form li div
+{
+	display:inline-block;
+}
+
+form li div
+{
+	color:#444;
+	margin:0 4px 0 0;
+	padding:0 0 8px;
+}
+
+form li span
+{
+	color:#444;
+	float:left;
+	margin:0 4px 0 0;
+	padding:0 0 8px;
+}
+
+form li div.left
+{
+	display:inline;
+	float:left;
+	width:48%;
+}
+
+form li div.right
+{
+	display:inline;
+	float:right;
+	width:48%;
+}
+
+form li div.left .medium
+{
+	width:100%;
+}
+
+form li div.right .medium
+{
+	width:100%;
+}
+
+.clear
+{
+	clear:both;
+}
+
+form li div label
+{
+	clear:both;
+	color:#00ff00;
+	display:block	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li span label
+{
+	clear:both;
+	color:#00ff00;
+	display:block;
+	font-size:9px;
+	line-height:9px;
+	margin:0;
+	padding-top:3px;
+}
+
+form li .datepicker
+{
+	cursor:pointer !important;
+	float:left;
+	height:16px;
+	margin:.1em 5px 0 0;
+	padding:0;
+	width:16px;
+}
+
+.form_description
+{
+	border-bottom:1px dotted #ccc;
+	clear:both;
+	display:inline-block;
+	margin:0 0 1em;
+}
+
+.form_description[class]
+{
+	display:block;
+}
+
+.form_description h2
+{
+	clear:left;
+	font-size:160%;
+	font-weight:400;
+	margin:0 0 3px;
+}
+
+.form_description p
+{
+	font-size:95%;
+	line-height:130%;
+	margin:0 0 12px;
+}
+
+form hr
+{
+	display:none;
+}
+
+form li.section_break
+{
+	border-top:1px dotted #ccc;
+	margin-top:9px;
+	padding-bottom:0;
+	padding-left:9px;
+	padding-top:13px;
+	width:97% !important;
+}
+
+form ul li.first
+{
+	border-top:none !important;
+	margin-top:0 !important;
+	padding-top:0 !important;
+}
+
+form .section_break h3
+{
+	font-size:110%;
+	font-weight:400;
+	line-height:130%;
+	margin:0 0 2px;
+}
+
+form .section_break p
+{
+	font-size:85%;
+
+	margin:0 0 10px;
+}
+
+/**** Buttons ****/
+input.button_text
+{
+	overflow:visible;
+	padding:0 7px;
+	width:auto;
+}
+
+.buttons input
+{
+	font-size:120%;
+	margin-right:5px;
+}
+
+/**** Inputs and Labels ****/
+label.description
+{
+	border:none;
+	color:#00dd00;
+	display:block;
+	font-size:95%;
+	font-weight:700;
+	line-height:150%;
+	padding:0 0 1px;
+}
+
+span.symbol
+{
+	font-size:115%;
+	line-height:130%;
+}
+
+input.text
+{
+	background:#fff url(../../../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+input.file
+{
+	color:#333;
+	font-size:100%;
+	margin:0;
+	padding:2px 0;
+}
+
+textarea.textarea
+{
+	background:#fff url(../../../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:100%;
+	margin:0;
+	width:99%;
+}
+
+select.select
+{
+	color:#333;
+	font-size:100%;
+	margin:1px 0;
+	padding:1px 0 0;
+	background:#fff url(../../../images/shadow.gif) repeat-x top;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+}
+
+
+input.currency
+{
+	text-align:right;
+}
+
+input.checkbox
+{
+	display:block;
+	height:13px;
+	line-height:1.4em;
+	margin:6px 0 0 3px;
+	width:13px;
+}
+
+input.radio
+{
+	display:block;
+	height:13px;
+	line-height:1.4em;
+	margin:6px 0 0 3px;
+	width:13px;
+}
+
+label.choice
+{
+	color:#00ff00;
+	display:block;
+	font-size:100%;
+	line-height:1.4em;
+	margin:-1.55em 0 0 25px;
+	padding:4px 0 5px;
+	width:90%;
+}
+
+select.select[class]
+{
+	margin:0;
+	padding:1px 0;
+}
+
+*:first-child+html select.select[class]
+{
+	margin:1px 0;
+}
+
+.safari select.select
+{
+	font-size:120% !important;
+	margin-bottom:1px;
+}
+
+input.small
+{
+	width:25%;
+}
+
+select.small
+{
+	width:25%;
+}
+
+input.medium
+{
+	width:50%;
+}
+
+select.medium
+{
+	width:50%;
+}
+
+input.large
+{
+	width:99%;
+}
+
+select.large
+{
+	width:100%;
+}
+
+textarea.small
+{
+	height:5.5em;
+}
+
+textarea.medium
+{
+	height:10em;
+}
+
+textarea.large
+{
+	height:20em;
+}
+
+/**** Errors ****/
+#error_message
+{
+	background:#fff;
+	border:1px dotted red;
+	margin-bottom:1em;
+	padding-left:0;
+	padding-right:0;
+	padding-top:4px;
+	text-align:center;
+	width:99%;
+}
+
+#error_message_title
+{
+	color:#DF0000;
+	font-size:125%;
+	margin:7px 0 5px;
+	padding:0;
+}
+
+#error_message_desc
+{
+	color:#000;
+	font-size:100%;
+	margin:0 0 .8em;
+}
+
+#error_message_desc strong
+{
+	background-color:#FFDFDF;
+	color:red;
+	padding:2px 3px;
+}
+
+form li.error
+{
+	background-color:#FFDFDF !important;
+	border-bottom:1px solid #EACBCC;
+	border-right:1px solid #EACBCC;
+	margin:3px 0;
+}
+
+form li.error label
+{
+	color:#DF0000 !important;
+}
+
+form p.error
+{
+	clear:both;
+	color:red;
+	font-size:10px;
+	font-weight:700;
+	margin:0 0 5px;
+}
+
+form .required
+{
+	color:red;
+	float:none;
+	font-weight:700;
+}
+
+/**** Guidelines and Error Highlight ****/
+form li.highlighted
+{
+	background-color:#fff7c0;
+}
+
+form .guidelines
+{
+	background:#f5f5f5;
+	border:1px solid #e6e6e6;
+	color:#444;
+	font-size:80%;
+	left:100%;
+	line-height:130%;
+	margin:0 0 0 8px;
+	padding:8px 10px 9px;
+	position:absolute;
+	top:0;
+	visibility:hidden;
+	width:42%;
+	z-index:1000;
+}
+
+form .guidelines small
+{
+	font-size:105%;
+}
+
+form li.highlighted .guidelines
+{
+	visibility:visible;
+}
+
+form li:hover .guidelines
+{
+	visibility:visible;
+}
+
+.no_guidelines .guidelines
+{
+	display:none !important;
+}
+
+.no_guidelines form li
+{
+	width:97%;
+}
+
+.no_guidelines li.section
+{
+	padding-left:9px;
+}
+
+/*** Success Message ****/
+.form_success 
+{
+	clear: both;
+	margin: 0;
+	padding: 90px 0pt 100px;
+	text-align: center
+}
+
+.form_success h2 {
+    clear:left;
+    font-size:160%;
+    font-weight:normal;
+    margin:0pt 0pt 3px;
+}
+
+/*** Password ****/
+ul.password{
+    margin-top:60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.password h2{
+    color:#DF0000;
+    font-weight:bold;
+    margin:0pt auto 10px;
+}
+
+.password input.text {
+   font-size:170% !important;
+   width:380px;
+   text-align: center;
+}
+.password label{
+   display:block;
+   font-size:120% !important;
+   padding-top:10px;
+   font-weight:bold;
+}
+
+#li_captcha{
+   padding-left: 5px;
+}
+
+
+#li_captcha span{
+	float:none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #666666;
+    background-color: rgba(00, 00, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(00, 00, 235, 0.50);
+}
+
+.review {
+    display:inline-block;
+	vertical-align:bottom;
+	
+    width:70%;   /* try changing back to left n see what happens */
+    padding-top:5%;
+    height:80%;
+}
+
+footer{
+height: 142px; 
+text-align: center;
+top: 0px;
+margin-top:150px;
+background: rgba(100,100,255,0.10);
+}
+
+
+

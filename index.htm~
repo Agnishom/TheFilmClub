@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>The Matrix Film Club</title>
+    <script src='scripts/jquery-1.11.1.min.js'></script>
+    <script src='scripts/jquery-stuff.js'></script>
+    <script src='scripts/alphabet.js'></script>
+    <script src='scripts/backtotop.js'></script>
+    <script src='scripts/jquery.bxslider.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/stylesheet.css'/>
+    <link rel='stylesheet' type='text/css' href='stylesheets/jquery.bxslider.css'/>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+</head>
+
+<body>
+<embed src="music/background.mp3" hidden="true" autostart="true" loop="true"/>
+ <a href="#" class="back-to-top">Back to Top</a>   
+<h1 class='welcome'>Welcome to The Matrix Film Club</h1>
+<center><canvas id="myCanvas" height=100></canvas></center>
+    <script type="text/javascript" src="scripts/bubbles.js"></script>
+    <script type="text/javascript" src="scripts/effect-1.js"></script>
+
+<center><nav class="cl-effect-14">
+    <a href="#tfc" data-hover="Home"><span><b>Home</b></span></a>
+    <a href="register.htm" data-hover="Join Us!"><span><b>Register</b></span></a>
+    <a href="about.htm" data-hover="The Club"><span><b>About Us</b></span></a>
+    <a href="contact.htm#" data-hover="Contact"><span><b>Contact Us</b></span></a>
+    <a href="review.html#" data-hover="Reviews"><span><b>Reviews</b></span></a>
+</nav></center>
+<!--<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>-->
+<a id='tfc'></a>
+
+<h1 class='heading'>The Matrix Film Club</h1>
+<table cellpadding=10>
+<tr><td>
+<div class='content'>
+    <h2>What's New?</h2>
+    <ul class="bxslider">
+  <li><a href=review.html#beautiful><img src="images/slideshow/01.jpg" /></a></li>
+  <li><a href=review.html#transformers><img src="images/slideshow/02.jpg" /></a></li>
+  <li><a href=review.html#tzp><img src="images/slideshow/03.jpg" /></a></li>
+  <li><a href=review.html#tzp><img src="images/slideshow/04.jpg" /></a></li>
+  <li><a href=review.html#tzp><img src="images/slideshow/05.jpg" /></a></li>
+</ul>
+</div></td>
+<td>
+<div class='content'>
+	<h2>Past Events</h2>
+	<ul>
+	<li>On <b>Wednesday June 11th</b> at The May Fair Hotel the Matrix Film Club presented by Ciroc Ultra Premium presented their third event of 2014 with the award-winning film <i>You want me to kill him?</i> directed by Andrew Douglas.</li>
+	<li>On <b>Thursday March 6, 2014</b> at The May Fair Hotel the Matrix Film Club presented by Ciroc Ultra Premium held their debut event with the award-winning film <i>Afternoon Delight</i>, directed by Jill Soloway, who won best director for the film at Sundance 2013.</li>
+	<li><p>On Wednesday June 26, 2013 The Matrix Film Club hosted&nbsp;the sold-out India Premiere of Andrew Napier's debut documentary<em> Mary and Bill&nbsp;</em>at The May Fair&nbsp;Hotel.</p><p>These events were	covered by The Telegraph, The Times of India &nbsp;and The Hindu</p</li>
+	</ul>
+	<div class='content'>
+	</td></tr></table>
+	</body>
+<footer>
+<a href="http://facebook.com/TheMatrixFilmClub"><img width="32" height="32" alt="The Matrix Film Club on Facebook" title="The Matrix Film Club on Facebook" src="images/facebook.png"></a>
+<a href="http://twitter.com/TheMatrixFilmClub"><img width="32" height="32" alt="The Matrix Film Club on Twitter" title="The Matrix Film Club on Twitter" src="images/twitter.png"></a>
+<br>
+<strong><a href="acknowledgements.htm">Acknowledgement</a></strong>
+</footer>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Contact Us | The Matrix Film Club</title>
+    <script src='scripts/jquery-1.11.1.min.js'></script>
+    <script src='scripts/backtotop.js'></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/stylesheet.css'/>
+    <link rel='stylesheet' type='text/css' href='stylesheets/contact.css'/>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+</head>
+
+<body>
+    <embed src="music/background.mp3" hidden="true" autostart="true" loop="true"/>
+<center><nav class="cl-effect-14">
+    <a href="index.htm" data-hover="Home"><span><b>Home</b></span></a>
+    <a href="register.htm" data-hover="Join Us!"><span><b>Register</b></span></a>
+    <a href="about.htm" data-hover="The Club"><span><b>About Us</b></span></a>
+    <a href="contact.htm#" data-hover="Contact"><span><b>Contact Us</b></span></a>
+    <a href="review.html#" data-hover="Reviews"><span><b>Reviews</b></span></a>
+</nav></center>
+<h1 class='heading'>Contact Us</h1>
+<div id='container'>
+    <a href="#" class="back-to-top">Back to Top</a>
+    
+    <div id="contact-form" class="clearfix">
+    <h1>Get In Touch!</h1>
+    <h2>Fill out the form below to contact us.</h2>
+    <h3>Kindly put as much information as possible for us to help you with your enquiry</h3>
+    <ul id="errors" class="">
+        <li id="info">There were some problems with your form submission:</li>
+    </ul>
+    <p id="success">Thanks for your message! We will get back to you ASAP!</p>
+    <form method="post" action="received.html">
+        <label for="name">Name: <span class="required">*</span></label>
+        <input type="text" id="name" name="name" value="" placeholder="John Doe" required="required" autofocus="autofocus" />
+         
+        <label for="email">Email Address: <span class="required">*</span></label>
+        <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required" />
+         
+        <label for="telephone">Telephone: </label>
+        <input type="tel" id="telephone" name="telephone" value="" />
+         
+        <label for="enquiry">Enquiry: </label>
+        <select id="enquiry" name="enquiry">
+            <option value="general">General</option>
+            <option value="sales">Donation</option>
+            <option value="support">Suggestions</option>
+        </select>
+         
+        <label for="message">Message: <span class="required">*</span></label>
+        <textarea id="message" name="message" placeholder="Your message must be greater than 20 charcters" required="required" data-minlength="20"></textarea>
+         
+        <span id="loading"></span>
+        <input type="submit" value="Holla!" id="submit-button" />
+        <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+    </form>
+</div>
+</div>
+
+
+
+</body>
+<footer>
+<a href="http://facebook.com/TheMatrixFilmClub"><img width="32" height="32" alt="The Matrix Film Club on Facebook" title="The Matrix Film Club on Facebook" src="images/facebook.png"></a>
+<a href="http://twitter.com/TheMatrixFilmClub"><img width="32" height="32" alt="The Matrix Film Club on Twitter" title="The Matrix Film Club on Twitter" src="images/twitter.png"></a>
+<br>
+<strong><a href="acknowledgements.htm">Acknowledgement</a></strong>
+</footer>
+</html>
